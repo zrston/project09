@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {MapMarker, Map} from 'react-kakao-maps-sdk'
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div>
+      <Map
+    center={{ lat: 33.5563, lng: 126.79581 }}
+    style={{ width: "100%", height: "360px" }}
+  >
+    <MapMarker position={{ lat: 33.55635, lng: 126.795841 }}>
+      <div style={{color:"#000"}}>월정리</div>
+    </MapMarker>
+  </Map>
+
+    
+
+  </div>
+  )
 }
 
-export default App;
+export default App
